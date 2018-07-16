@@ -318,4 +318,4 @@ Promise.resolve().then(() => console.log(4));
 - C. 5, 3, 4, 1, 2
 - D. 3, 5, 1, 4, 2
 
-- Answer A
+- Answer C
