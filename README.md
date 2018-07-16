@@ -302,7 +302,7 @@ while (new Date() - start <= 1000) {}
 - C. 1000
 - D. 以上都不正确
 
-- Answer A
+- Answer D
 
 ## 22. 请说明以下程序运行结果
 
