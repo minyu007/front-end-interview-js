@@ -302,7 +302,7 @@ while (new Date() - start <= 1000) {}
 - C. 1000
 - D. 以上都不正确
 
-- Answer D
+- Answer DD
 
 ## 22. 请说明以下程序运行结果
 
@@ -319,3 +319,31 @@ Promise.resolve().then(() => console.log(4));
 - D. 3, 5, 1, 4, 2
 
 - Answer C
+
+## 23. 关于javascript 基本类型正确的是
+
+- A. string, number, undefined, null, boolean
+- B. string, number, null, boolean, array
+- C. string, number, undefined, boolean, object
+- D. string, number, NaN, null, boolean
+
+- Answer A
+
+## 24. 关于javascript 方法调用以下说法正确的是
+
+- A. javascript是传引用调用
+- B. javascript 方法都有 arguments 参数
+- C. 关于javascript传参，如果参数是数组类型则是传引用调用，否则为传值调用
+- D. 关于javascript传参，如果参数是Object类型则是传引用调用，否则为传值调用
+
+- Answer A
+
+
+## 25. 以下哪些不是ES6 stage-1的新特性
+
+- A. const, let 定义常量及变量
+- B. Promise
+- C. 箭头函数
+- D. async/await处理异步
+
+- Answer A
