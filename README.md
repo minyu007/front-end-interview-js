@@ -160,3 +160,162 @@ console.log(bar + false);
 - D. call传入的则是直接的参数列表。call 方法可将一个函数的对象上下文从初始的上下文改变为由 thisObj 指定的新对象。
 
 - Answer 
+
+## 13. 请说明以下程序运行结果
+
+```javascript
+console.log(0.1 + 0.2 == 0.3)
+```
+- A. false
+- B. true
+
+- Answer A
+
+
+## 14. 请说明以下程序运行结果
+
+```javascript
+console.log(false == '0')
+console.log(false === '0')
+```
+- A. true, false
+- B. true, true
+- C. false, false
+
+- Answer A
+
+## 15. 请说明以下程序运行结果
+
+```javascript
+var a={},
+    b={key:'b'},
+    c={key:'c'};
+
+a[b]=123;
+a[c]=456;
+
+console.log(a[b]);
+```
+- A. 123
+- B. 456
+- C. 123456
+
+- Answer B
+
+## 16. 请说明以下程序运行结果
+
+```javascript
+var length = 10;
+function fn() {
+	console.log(this.length);
+}
+
+var obj = {
+  length: 5,
+  method: function(fn) {
+    fn();
+    arguments[0]();
+  }
+};
+
+obj.method(fn, 1);
+```
+- A. 10, 5
+- B. 10, 1
+- C. 10, 2
+
+- Answer C
+
+## 17. 请说明以下程序运行结果
+
+```javascript
+(function () {
+    try {
+        throw new Error();
+    } catch (x) {
+        var x = 1, y = 2;
+        console.log(x);
+    }
+    console.log(x);
+    console.log(y);
+})();
+```
+- A. 1, 2
+- B. 1, undefined, 2
+- C. 程序报错
+
+- Answer B
+
+## 18. 请说明以下程序运行结果
+
+```javascript
+for (let i = 0; i < 5; i++) {
+  setTimeout(function() { console.log(i); }, i * 1000 );
+}
+```
+- A. 0, 1, 2, 3, 4
+- B. 5, 5, 5, 5, 5
+- C. 程序报错
+
+- Answer A
+
+## 19. 请说明以下程序运行结果
+
+```javascript
+for (var i = 0; i < 5; i++) {
+  setTimeout(function() { console.log(i); }, i * 1000 );
+}
+```
+- A. 0, 1, 2, 3, 4
+- B. 5, 5, 5, 5, 5
+- C. 程序报错
+
+- Answer B
+
+## 20. 请说明以下程序运行结果
+
+```javascript
+console.log(1 < 2 < 3);
+console.log(3 > 2 > 1);
+```
+- A. true, false
+- B. true, true
+- C. false, true
+- D. false, false
+
+- Answer A
+
+
+## 21. 请说明以下程序运行结果
+
+```javascript
+
+var start = new Date(); 
+var end = 0; 
+setTimeout(function() { 
+	console.log(new Date() - start); 
+}, 500); 
+while (new Date() - start <= 1000) {}
+```
+- A. 500
+- B. 1004
+- C. 1000
+- D. 以上都不正确
+
+- Answer A
+
+## 22. 请说明以下程序运行结果
+
+```javascript
+setTimeout(() => console.log(1));
+setImmediate(() => console.log(2));
+process.nextTick(() => console.log(3));
+Promise.resolve().then(() => console.log(4));
+(() => console.log(5))();
+```
+- A. 5, 4, 3, 1, 2
+- B. 3, 4, 5, 2, 1
+- C. 5, 3, 4, 1, 2
+- D. 3, 5, 1, 4, 2
+
+- Answer A
