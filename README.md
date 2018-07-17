@@ -347,3 +347,102 @@ Promise.resolve().then(() => console.log(4));
 - D. async/await处理异步
 
 - Answer A
+
+## 26. 以下程序运行结果为
+
+```javascript
+var a = 1;
+function b(){
+  var a;
+  console.log(a);
+  a = 2;
+}
+```
+- A. 1
+- B. 2
+- C. undefined
+- D. 以上都不对
+
+- Answer C
+
+## 27. 以下程序运行结果为
+
+```javascript
+var a = 1;
+var obj = {
+  a: 2,
+  getA: function(){
+      console.log(this.a)
+  }
+}
+obj.getA()
+var _getA = obj.getA()
+_getA()
+```
+- A. 1, 1
+- B. 2, 1
+- C. 1, 2
+- D. 以上都不对
+
+- Answer C
+
+## 29. 以下哪个方法不是javascript Array 的ES6特性
+
+- A. of()
+- B. from()
+- C. concat()
+- D. fill()
+
+- Answer C
+
+## 30. javascript 异步发展史顺序
+
+- A. callback -> promise -> yied/next -> async/await
+- B. callback -> yied/next -> promise -> async/await
+- C. callback -> async/await -> yied/next -> promise
+
+- Answer 
+
+## 31. 在代码可读性的角度，以下哪一种是解决javascript多层回调的最好方式
+
+- A. callback嵌套
+- B. promise
+- C. yied/next
+- D. async/await
+
+- Answer D
+
+## 32. 在es6环境下解决javascript多个异步请求并发描述正确的是
+
+- A. 使用callback嵌套
+- B. 使用promise.all
+- C. 使用多层async/await
+
+- Answer B
+
+## 33. 在浏览器环境下，所有js原型链的根节点是什么
+
+- A. null
+- B. Object
+- C. window
+- D. Document
+
+- Answer A
+
+## 34. 关于javascript以下描述错误的是
+
+- A. function都有一个prototype属性
+- B. Object都有一个隐藏的__proto__属性
+- C. function都有一个隐藏的arguments参数
+- D. Array都有一个prototype属性
+
+- Answer D
+
+## 35. 以下哪一种不是es6中的原始数据类型
+
+- A. Symbol
+- B. Object
+- C. Array
+- D. String
+
+- Answer C
