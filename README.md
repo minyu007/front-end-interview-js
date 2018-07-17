@@ -446,3 +446,97 @@ _getA()
 - D. String
 
 - Answer C
+
+
+## 36. 以下程序运行结果为
+
+```javascript
+let s1 = Symbol();
+let s2 = Symbol();
+console.log(s1 === s2)
+let s1 = Symbol('foo');
+let s2 = Symbol('foo');
+console.log(s1 === s2)
+```
+- A. false, false
+- B. false, true
+- C. true, true
+- D. 以上都不对
+
+- Answer A
+
+## 37. javascript是单线程语言还是多线程？
+
+- A. 单线程
+- B. 多线程
+
+- Answer A
+
+## 38. 关于js中小数计算精度不准确的问题，请给写一个function给出解决方案。
+
+## 39. es6中为什么要引入Symbol类型
+
+## 40 请简单的描述一下javascript闭包
+
+## 41 请简单描述一下javascript中的事件委托，事件委托是通过什么机制实现的
+
+## 42 javascript中那些事件没有冒泡机制，请举例。
+
+## 43 请描述一下angular1.x 与angular2+ 的本质区别
+
+## 44 请描述vue2， react， angular2+ 三个框架的优缺点
+
+## 45 请使用es6的语法对以下两个数组进行，并集，交集，全集操作
+
+```javascript
+let arrA = [{a: 1, b: 2}, {c: 3, d: 4}, {e: 5, f: 6}]
+let arrA = [{e: 5, f: 6}, {g: 7, h: 8}, {i: 9, j: 10}]
+```
+
+## 46 请使用es5的语法对以下两个数组进行，并集，交集，全集操作
+
+```javascript
+let arrA = [{a: 1, b: 2}, {c: 3, d: 4}, {e: 5, f: 6}]
+let arrA = [{e: 5, f: 6}, {g: 7, h: 8}, {i: 9, j: 10}]
+```
+
+## 47 请使用es6的语法操作以下数组, 将3号位复制到0号位
+
+```javascript
+let arr = [1, 2, 3, 4, 5]
+```
+## 48 请使用es5的语法修改以下程序存在的bug
+
+```javascript
+var arr = [10, 32, 65, 2];
+for (var i = 0; i < arr.length; i++) {
+  setTimeout(function() {
+    console.log('The index of this number is: ' + i);
+  }, 3000);
+}
+```
+
+## 49 请简单描述redux框架的作用
+
+## 50. 以下程序运行结果为
+
+```javascript
+function mul(x) {
+  return function(y) {
+    return function(z) {
+      return function(w) {
+        return function(p) {
+          return x * y * z * w * p;
+        };
+      };
+    };
+  };
+}
+console.log(mul(2)(3)(4)(5)(6));
+```
+- A. 720
+- B. undefined
+- C. Type Error
+- D. Reference Error
+
+- Answer A
