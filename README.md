@@ -540,3 +540,56 @@ console.log(mul(2)(3)(4)(5)(6));
 - D. Reference Error
 
 - Answer A
+
+## 51. 以下程序运行结果为
+
+```javascript
+(function() {
+  console.log(typeof displayFunc);
+  var displayFunc = function(){
+    console.log("Hi I am inside displayFunc");
+  }
+}());
+```
+- A. function
+- B. undefined
+- C. 'Hi I am inside displayFunc'
+- D. ReferenceError: displayFunc is not defined
+
+- Answer B
+
+## 52. 以下程序运行结果为
+
+```javascript
+(function() {
+  var array = new Array('100');
+  console.log(array);
+  console.log(array.length);
+}());
+```
+- A. [undefined × 100] 100
+- B. undefined undefined
+- C. ["100"] 1
+- D. ReferenceError: array is not defined
+
+- Answer 
+
+## 53. 以下程序运行结果为
+
+```javascript
+(function() {
+  var array1 = [];
+  var array2 = new Array(100);
+  var array3 = new Array(['1',2,'3',4,5.6]);
+  console.log(array1);
+  console.log(array2);
+  console.log(array3);
+  console.log(array3.length);
+}());
+```
+- A. [] [] [Array[5]] 1
+- B. [] [undefined × 100] Array[5] 5
+- C. [] [] ['1',2,'3',4,5.6] 5
+- D. [] [] [Array[5]] 5
+
+- Answer A
