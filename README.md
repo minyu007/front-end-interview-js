@@ -403,7 +403,7 @@ _getA()
 
 - Answer 
 
-## 31. 在代码可读性的角度，以下哪一种是解决javascript多层回调的最好方式
+## 31. 在代码可读性的角度，以下哪一种是解决javascript多层异步回调的最好方式
 
 - A. callback嵌套
 - B. promise
