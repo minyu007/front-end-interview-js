@@ -346,7 +346,7 @@ Promise.resolve().then(() => console.log(4));
 - C. 箭头函数
 - D. async/await处理异步
 
-- Answer A
+- Answer D
 
 ## 26. 以下程序运行结果为
 
