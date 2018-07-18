@@ -384,7 +384,7 @@ _getA()
 - C. 1, 2
 - D. 以上都不对
 
-- Answer C
+- Answer B
 
 ## 29. 以下哪个方法不是javascript Array 的ES6特性
 
