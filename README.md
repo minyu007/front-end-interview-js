@@ -152,14 +152,14 @@ console.log(bar + false);
 
 - Answer C
 
-## 12. 下面有关JavaScript中 call和apply的描述，错误的是？
+## 12. ES6中的箭头函数与普通function区别描述错误的是
 
-- A. call与apply都属于Function.prototype的一个方法，所以每个function实例都有call、apply属性
-- B. 两者传递的参数不同，call函数第一个参数都是要传入给当前对象的对象，apply不是
-- C. apply传入的是一个参数数组，也就是将多个参数组合成为一个数组传入
-- D. call传入的则是直接的参数列表。call 方法可将一个函数的对象上下文从初始的上下文改变为由 thisObj 指定的新对象。
+- A. 函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。
+- B. 不可以当作构造函数，不可以使用new命令，否则会抛出一个错误。
+- C. 不可以使用arguments对象，该对象在函数体内不存在。
+- D. 可以使用yield命令，用作 Generator 函数。
 
-- Answer 
+- Answer D
 
 ## 13. 请说明以下程序运行结果
 
@@ -304,7 +304,7 @@ while (new Date() - start <= 1000) {}
 
 - Answer DD
 
-## 22. 请说明以下程序运行结果
+## 22. Node环境下请说明以下程序运行结果
 
 ```javascript
 setTimeout(() => console.log(1));
@@ -332,14 +332,14 @@ Promise.resolve().then(() => console.log(4));
 ## 24. 关于javascript 方法调用以下说法正确的是
 
 - A. javascript是传引用调用
-- B. javascript 方法都有 arguments 参数
+- B. javascript 函数都有隐藏的 arguments 参数
 - C. 关于javascript传参，如果参数是数组类型则是传引用调用，否则为传值调用
 - D. 关于javascript传参，如果参数是Object类型则是传引用调用，否则为传值调用
 
 - Answer A
 
 
-## 25. 以下哪些不是ES6 stage-1的新特性
+## 25. 以下哪一项属于ES6 stage-3的特性
 
 - A. const, let 定义常量及变量
 - B. Promise
@@ -386,7 +386,7 @@ _getA()
 
 - Answer B
 
-## 29. 以下哪个方法不是javascript Array 的ES6特性
+## 29. 以下哪个方法不属于ES6 Array 的新加入的。
 
 - A. of()
 - B. from()
@@ -397,22 +397,22 @@ _getA()
 
 ## 30. javascript 异步发展史顺序
 
-- A. callback -> promise -> yied/next -> async/await
-- B. callback -> yied/next -> promise -> async/await
-- C. callback -> async/await -> yied/next -> promise
+- A. callback -> promise -> generator(yied/next) -> async/await
+- B. callback -> generator(yied/next) -> promise -> async/await
+- C. callback -> async/await -> generator(yied/next) -> promise
+- C. callback -> generator(yied/next) -> async/await -> promise
+- Answer A
 
-- Answer 
-
-## 31. 在代码可读性的角度，以下哪一种是解决javascript多层异步回调的最好方式
+## 31. ES6环境，在代码可读性的角度，以下哪一种是解决javascript多层异步回调的最好方式
 
 - A. callback嵌套
 - B. promise
-- C. yied/next
+- C. generator(yied/next)
 - D. async/await
 
 - Answer D
 
-## 32. 在es6环境下解决javascript多个异步请求并发描述正确的是
+## 32. 在ES6环境下解决javascript多个异步请求并发描述正确的是
 
 - A. 使用callback嵌套
 - B. 使用promise.all
@@ -420,7 +420,7 @@ _getA()
 
 - Answer B
 
-## 33. 在浏览器环境下，所有js原型链的根节点是什么
+## 33. 在浏览器环境下，javascript原型链的根节点是什么
 
 - A. null
 - B. Object
@@ -572,7 +572,7 @@ console.log(mul(2)(3)(4)(5)(6));
 - C. ["100"] 1
 - D. ReferenceError: array is not defined
 
-- Answer 
+- Answer C
 
 ## 53. 以下程序运行结果为
 
@@ -596,3 +596,94 @@ console.log(mul(2)(3)(4)(5)(6));
 
 ## 54. 请描述react的组件生命周期钩子方法与作用。
 ## 55. 请描述Vue2的组件生命周期钩子方法与作用。
+
+## 56. 关于javascript中的setTimeout(function, timer)方法第二个时间参数描述错误的是
+
+- A. timer是可选参数
+- B. 如果timer设置为0，这该function会变为同步方法立即执行
+- C. timer值在不同浏览器环境下有不同的上限
+- D. function不一定会在设置的timer时间结束后执行。
+
+## 57. 为什么在query中可以使用链式调用，比如$( "div" ).css( "width", "300px" ).add( "p" ).css( "background-color", "blue" );
+
+## 58. 以下程序运行结果为:
+
+```javascript
+function a(){
+  return
+  {
+    message: 'hello'
+  }
+}
+a()
+```
+- A. undefined
+- B. {message: 'hello'}
+- C. Uncaught TypeError
+- D. {}
+
+- Answer A
+
+## 59. 以下程序运行结果为:
+```javascript
+function foo() {
+  return () => {
+    return () => {
+      return () => {
+        console.log('id:', this.id);
+      };
+    };
+  };
+}
+var f = foo.call({id: 1});
+var t1 = f.call({id: 2})()(); 
+var t2 = f().call({id: 3})(); 
+var t3 = f()().call({id: 4}); 
+```
+
+- A. id: 1, id: 1, id: 1
+- B. id: 2, id: 3, id: 4
+- C. id: 1, id: 2, id: 3
+- D. 以上都不正确
+
+- Answer A
+
+## 60.请说明下ES6中的双冒号运算符，以及他的作用。
+
+## 61. ES5中相等运算符（==）和严格相等运算符（===）描述错误的是
+
+- A. ==会自动转换数据类型
+- B. NaN === NaN 返回false
+- C. -0 === +0 返回ture
+- D. null === null 返回false
+
+- Answer D
+
+## 62. 请简单描述一下react与vue2中所使用的vDom内部原理。
+
+## 63. 以下关于ES6 声明变量的方式描述正确的是
+
+- A. var命令和function命令
+- B. let和const命令
+- C. import命令和class命令
+- D. 以上都正确
+
+- Answer D
+
+## 64. 以下关于ES6 声明变量的方式描述正确的是
+
+- A. var命令和function命令
+- B. let和const命令
+- C. import命令和class命令
+- D. 以上都正确
+
+- Answer D
+
+## 65. 以下关于ES5 顶级对象描述正确的是
+
+- A. 浏览器里面，顶层对象是window，但 Node 和 Web Worker 没有window
+- B. 浏览器和 Web Worker 里面，self也指向顶层对象，但是 Node 没有self
+- C. Node 里面，顶层对象是global，但其他环境都不支持。
+- D. 以上都正确
+
+- Answer D
