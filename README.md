@@ -670,12 +670,12 @@ var t3 = f()().call({id: 4});
 
 - Answer D
 
-## 64. 以下关于ES6 声明变量的方式描述正确的是
+## 64. 关于rxjs你了解多少
 
-- A. var命令和function命令
-- B. let和const命令
-- C. import命令和class命令
-- D. 以上都正确
+- A. 听过
+- B. 简单使用过
+- C. 精通
+- D. 精通并熟悉原理
 
 - Answer D
 
@@ -687,3 +687,4 @@ var t3 = f()().call({id: 4});
 - D. 以上都正确
 
 - Answer D
+
