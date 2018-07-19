@@ -490,14 +490,14 @@ console.log(s1 === s2)
 
 ```javascript
 let arrA = [{a: 1, b: 2}, {c: 3, d: 4}, {e: 5, f: 6}]
-let arrA = [{e: 5, f: 6}, {g: 7, h: 8}, {i: 9, j: 10}]
+let arrB = [{e: 5, f: 6}, {g: 7, h: 8}, {i: 9, j: 10}]
 ```
 
 ## 46 请使用es5的语法对以下两个数组进行，并集，交集，全集操作
 
 ```javascript
-let arrA = [{a: 1, b: 2}, {c: 3, d: 4}, {e: 5, f: 6}]
-let arrA = [{e: 5, f: 6}, {g: 7, h: 8}, {i: 9, j: 10}]
+var arrA = [{a: 1, b: 2}, {c: 3, d: 4}, {e: 5, f: 6}]
+var arrB = [{e: 5, f: 6}, {g: 7, h: 8}, {i: 9, j: 10}]
 ```
 
 ## 47 请使用es6的语法操作以下数组, 将3号位复制到0号位
